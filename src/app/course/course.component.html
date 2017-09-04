@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let course of courses">
+    <span style="display:inline-block; width: 200px;">{{course.title | uppercase}}</span> 
+    <favorite></favorite> <br/>
+    {{course.rating | number:'1.1-2'}} <br/>
+    {{course.students | number}} <br/>
+    {{course.price | currency:'AUD':true:'3.2-2'}} <br/>
+    {{course.releaseDate | date:'shortDate'}} <br/>
+    {{course.details | summary:30}} <br/> <br/>
+  </li>
+</ul>
